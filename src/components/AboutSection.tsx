@@ -53,66 +53,51 @@ export default function AboutSection() {
               01
             </div>
 
-            {/* Main visual block */}
+            {/* Main visual block — gate entrance image */}
             <div className="relative">
               <div
-                className="w-full aspect-[4/3] relative overflow-hidden"
+                className="w-full aspect-[4/3] relative overflow-hidden group"
                 style={{ borderRadius: '2px' }}
               >
-                {/* Abstract architectural visualization */}
+                {/* Real entrance image */}
+                <img
+                  src="/hero-gate.svg"
+                  alt="Avani City — Grand Entrance Gate"
+                  className="absolute inset-0 w-full h-full transition-transform duration-[2s] ease-out group-hover:scale-105"
+                  style={{ objectFit: 'cover', objectPosition: 'center 45%' }}
+                />
+                {/* Cinematic grade overlay on image */}
                 <div
                   className="absolute inset-0"
                   style={{
-                    background: `
-                      linear-gradient(135deg, #0F1F3D 0%, #0A1628 40%, #1A3566 70%, #0A1628 100%)
-                    `,
+                    background: `linear-gradient(180deg,
+                        rgba(6,13,26,0.20) 0%,
+                        rgba(6,13,26,0.05) 40%,
+                        rgba(6,13,26,0.35) 80%,
+                        rgba(6,13,26,0.70) 100%
+                      )`,
                   }}
                 />
-                {/* Grid pattern */}
+                {/* Gold atmospheric tint at gate level */}
                 <div
-                  className="absolute inset-0 opacity-20"
+                  className="absolute inset-0"
                   style={{
-                    backgroundImage: `
-                      linear-gradient(rgba(201,168,76,0.3) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(201,168,76,0.3) 1px, transparent 1px)
-                    `,
-                    backgroundSize: '40px 40px',
+                    background: 'radial-gradient(ellipse 60% 30% at 50% 42%, rgba(201,140,30,0.08) 0%, transparent 70%)',
                   }}
                 />
-                {/* Highlight lines */}
-                <div className="absolute inset-0 flex flex-col justify-around opacity-30">
-                  {[...Array(5)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-full h-px"
-                      style={{ background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent)' }}
-                    />
-                  ))}
-                </div>
-                {/* Central element */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div
-                    className="text-center"
-                    style={{ fontFamily: 'var(--font-cormorant)' }}
+                {/* Bottom caption */}
+                <div className="absolute bottom-0 left-0 right-0 px-5 py-4">
+                  <span
+                    style={{
+                      fontFamily: 'var(--font-jost)',
+                      fontSize: '9px',
+                      letterSpacing: '0.35em',
+                      textTransform: 'uppercase',
+                      color: 'rgba(201,168,76,0.6)',
+                    }}
                   >
-                    <div
-                      className="text-5xl font-light mb-2"
-                      style={{
-                        background: 'linear-gradient(135deg, #C9A84C, #E8C97A, #C9A84C)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        backgroundClip: 'text',
-                      }}
-                    >
-                      AVANI
-                    </div>
-                    <div
-                      className="text-xs tracking-[0.6em] uppercase"
-                      style={{ color: 'rgba(201,168,76,0.5)' }}
-                    >
-                      City
-                    </div>
-                  </div>
+                    Grand Entrance Gate &#xB7; Avani City
+                  </span>
                 </div>
                 {/* Corner accents */}
                 {[
@@ -218,19 +203,19 @@ export default function AboutSection() {
               }}
             >
               <p>
-                Avani City is not merely a plotted development. It is a curated vision of how land should
-                be held — as legacy, as investment, and as the foundation upon which tomorrow's finest
-                homes will rise.
+                Avani City is not merely a plotted development. It is a curated legacy holding —
+                land acquired today, at prices that history will make seem prescient, within a township
+                built for those who understand that real wealth begins with real land.
               </p>
               <p>
-                Designed with the precision of master planners and the sensibility of architects who
-                understand permanence, Avani City offers 200+ premium plots within a fully gated,
-                infrastructure-complete township.
+                Designed with the exacting precision of master planners and the sensibility of architects
+                who build for permanence, Avani City presents 200+ premium plots within a fully gated,
+                infrastructure-complete township ready for immediate construction.
               </p>
               <p>
-                Wide tree-lined boulevards, underground utilities, green corridors, and a community clubhouse
-                form the bones of a neighborhood that will only appreciate in character and value over
-                the decades ahead.
+                Tree-lined boulevards, underground electrical networks, piped water, a clubhouse, and
+                curated green corridors form the bones of a neighbourhood that appreciates in
+                character, community, and value with every passing year.
               </p>
             </div>
 
