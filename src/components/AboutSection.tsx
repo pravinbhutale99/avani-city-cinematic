@@ -96,7 +96,7 @@ export default function AboutSection() {
                       color: 'rgba(201,168,76,0.6)',
                     }}
                   >
-                    Grand Entrance Gate &#xB7; Avani City
+                    Avani Developers &amp; Construction
                   </span>
                 </div>
                 {/* Corner accents */}
