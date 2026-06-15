@@ -46,7 +46,7 @@ export default function InvestmentSection() {
         style={{ filter: 'saturate(0) brightness(2)' }}
       >
         <img
-          src="/hero-gate.svg"
+          src="/hero-entrance.jpeg"
           alt=""
           className="absolute w-full h-full"
           style={{ objectFit: 'cover', objectPosition: 'center 40%', transform: 'scale(1.1)' }}
