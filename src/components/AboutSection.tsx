@@ -59,12 +59,12 @@ export default function AboutSection() {
                 className="w-full aspect-[4/3] relative overflow-hidden group"
                 style={{ borderRadius: '2px' }}
               >
-                {/* Real entrance image */}
+                {/* Real AVANI CITY entrance gate */}
                 <img
-                  src="/hero-gate.svg"
+                  src="/hero-entrance.jpeg"
                   alt="Avani City — Grand Entrance Gate"
                   className="absolute inset-0 w-full h-full transition-transform duration-[2s] ease-out group-hover:scale-105"
-                  style={{ objectFit: 'cover', objectPosition: 'center 45%' }}
+                  style={{ objectFit: 'cover', objectPosition: 'center 42%' }}
                 />
                 {/* Cinematic grade overlay on image */}
                 <div
