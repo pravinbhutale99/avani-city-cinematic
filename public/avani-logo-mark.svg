@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 136" width="120" height="136">
+  <defs>
+    <!-- Dark navy — top-left large facet -->
+    <linearGradient id="f1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08244E"/>
+      <stop offset="100%" stop-color="#0D3566"/>
+    </linearGradient>
+    <!-- Mid cobalt — top-right facet -->
+    <linearGradient id="f2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1B5EA8"/>
+      <stop offset="100%" stop-color="#1650A0"/>
+    </linearGradient>
+    <!-- Bright cobalt — bottom-right facet -->
+    <linearGradient id="f3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E78CC"/>
+      <stop offset="100%" stop-color="#2468BE"/>
+    </linearGradient>
+    <!-- Deep navy — bottom-left facet -->
+    <linearGradient id="f4" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#103870"/>
+      <stop offset="100%" stop-color="#0A2E60"/>
+    </linearGradient>
+    <!-- Thin bright top highlight -->
+    <linearGradient id="f5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2060A8"/>
+      <stop offset="100%" stop-color="#3280CC"/>
+    </linearGradient>
+  </defs>
+
+  <!--
+    AVANI logo: a faceted crystalline pentagon / inverted-arch shape
+    Peak at top-centre, widens to full width at mid-height,
+    then tapers back to a slightly narrower flat bottom.
+
+    Geometry (120×136 canvas):
+      Top peak:          (60, 4)
+      Upper-left arm:    (4,  52)
+      Lower-left:        (16, 132)
+      Lower-right:       (104,132)
+      Upper-right arm:   (116, 52)
+
+    Central convergence point: (60, 78) — where all inner facet edges meet
+  -->
+
+  <!-- Facet 1: Top-left — dark navy -->
+  <!-- Peak → upper-left arm → centre -->
+  <polygon points="60,4  4,52  60,78" fill="url(#f1)"/>
+
+  <!-- Facet 2: Top-right — bright cobalt -->
+  <!-- Peak → centre → upper-right arm -->
+  <polygon points="60,4  60,78  116,52" fill="url(#f2)"/>
+
+  <!-- Facet 3: Bottom-left — deep navy -->
+  <!-- Upper-left arm → lower-left → centre -->
+  <polygon points="4,52  16,132  60,78" fill="url(#f4)"/>
+
+  <!-- Facet 4: Bottom-right — bright mid-blue -->
+  <!-- Centre → lower-right → upper-right arm -->
+  <polygon points="60,78  104,132  116,52" fill="url(#f3)"/>
+
+  <!-- Facet 5: Bottom-centre — slightly lighter to close the base -->
+  <!-- Lower-left → lower-right → centre -->
+  <polygon points="16,132  104,132  60,78" fill="url(#f3)" opacity="0.85"/>
+
+  <!-- Internal edge lines — crisp facet separation, very subtle -->
+  <!-- Vertical centre axis -->
+  <line x1="60" y1="4"   x2="60"  y2="78"  stroke="rgba(255,255,255,0.18)" stroke-width="0.6"/>
+  <!-- Left diagonal -->
+  <line x1="4"  y1="52"  x2="60"  y2="78"  stroke="rgba(255,255,255,0.10)" stroke-width="0.5"/>
+  <!-- Right diagonal -->
+  <line x1="116" y1="52" x2="60"  y2="78"  stroke="rgba(255,255,255,0.10)" stroke-width="0.5"/>
+  <!-- Horizontal mid -->
+  <line x1="4"  y1="52"  x2="116" y2="52"  stroke="rgba(255,255,255,0.07)" stroke-width="0.4"/>
+  <!-- Bottom centre -->
+  <line x1="16" y1="132" x2="104" y2="132" stroke="rgba(255,255,255,0.07)" stroke-width="0.4"/>
+
+  <!-- Outer perimeter: crisp white at very low opacity -->
+  <polygon
+    points="60,4  116,52  104,132  16,132  4,52"
+    fill="none"
+    stroke="rgba(255,255,255,0.20)"
+    stroke-width="1"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+</svg>
