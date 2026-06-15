@@ -75,14 +75,14 @@ export default function HeroSection() {
             transition: 'transform 1.8s cubic-bezier(0.16,1,0.3,1)',
           }}
         >
-          {/* The real hero image — swap src to /hero-entrance.jpg when you have it */}
+          {/* Real AVANI CITY entrance gate — architectural render */}
           <img
-            src="/hero-gate.svg"
+            src="/hero-entrance.jpeg"
             alt="Avani City Entrance"
             onLoad={() => setLoaded(true)}
             onError={() => setImgError(true)}
             className="absolute inset-0 w-full h-full"
-            style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
+            style={{ objectFit: 'cover', objectPosition: 'center 38%' }}
           />
 
           {/* Atmospheric colour grade tinted over image: warm dark blue-golden tones */}
