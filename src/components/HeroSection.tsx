@@ -189,6 +189,19 @@ export default function HeroSection() {
         }}
       />
 
+      {/* 6. Subtle AVANI brand-blue ambient — very faint, top-left whisper */}
+      <div
+        className="absolute inset-0 z-10 pointer-events-none"
+        style={{
+          background: `
+            radial-gradient(ellipse 40% 50% at 12% 20%,
+              rgba(26,80,168,0.06) 0%,
+              transparent 65%
+            )
+          `,
+        }}
+      />
+
       {/* ── PARTICLES ── */}
       <div className="absolute inset-0 z-20 pointer-events-none overflow-hidden">
         {particles.map((p, i) => (
@@ -238,39 +251,80 @@ export default function HeroSection() {
         className="absolute inset-0 z-30 flex flex-col items-center justify-center px-6 text-center"
         style={{ y: textY, opacity: heroOpacity }}
       >
-        {/* Top eyebrow */}
+        {/* Hero logo mark — AVANI brand identity */}
         <motion.div
-          className="flex items-center gap-5 mb-8"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col items-center mb-9"
+          initial={{ opacity: 0, y: 28, scale: 0.85 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
+          {/* The real AVANI pentagon logo mark */}
+          <div style={{ filter: 'drop-shadow(0 4px 24px rgba(26,80,168,0.55)) drop-shadow(0 0 8px rgba(40,112,200,0.3))' }}>
+            <svg viewBox="0 0 120 136" width="52" height="59" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="hf1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#082248"/>
+                  <stop offset="100%" stopColor="#0D3060"/>
+                </linearGradient>
+                <linearGradient id="hf2" x1="1" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#1958A0"/>
+                  <stop offset="100%" stopColor="#1450A8"/>
+                </linearGradient>
+                <linearGradient id="hf3" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#0A2A58"/>
+                  <stop offset="100%" stopColor="#082040"/>
+                </linearGradient>
+                <linearGradient id="hf4" x1="1" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#2870C8"/>
+                  <stop offset="100%" stopColor="#1E60B8"/>
+                </linearGradient>
+              </defs>
+              <polygon points="60,4 4,52 60,77" fill="url(#hf1)"/>
+              <polygon points="60,4 60,77 116,52" fill="url(#hf2)"/>
+              <polygon points="4,52 16,132 60,77" fill="url(#hf3)"/>
+              <polygon points="60,77 104,132 116,52" fill="url(#hf4)"/>
+              <polygon points="16,132 104,132 60,77" fill="url(#hf4)" opacity="0.8"/>
+              <line x1="60" y1="4"   x2="60"  y2="77"  stroke="rgba(255,255,255,0.22)" strokeWidth="0.6"/>
+              <line x1="4"  y1="52"  x2="60"  y2="77"  stroke="rgba(255,255,255,0.12)" strokeWidth="0.5"/>
+              <line x1="116" y1="52" x2="60"  y2="77"  stroke="rgba(255,255,255,0.12)" strokeWidth="0.5"/>
+              <polygon points="60,4 116,52 104,132 16,132 4,52" fill="none" stroke="rgba(255,255,255,0.22)" strokeWidth="0.8" strokeLinejoin="round"/>
+            </svg>
+          </div>
+
+          {/* "Now Presenting" eyebrow below mark */}
           <motion.div
-            className="h-px bg-avani-gold"
-            initial={{ width: 0 }}
-            animate={{ width: 40 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            style={{ opacity: 0.7 }}
-          />
-          <span
-            style={{
-              fontFamily: 'var(--font-jost)',
-              fontSize: '9px',
-              letterSpacing: '0.5em',
-              textTransform: 'uppercase',
-              color: 'rgba(201,168,76,0.75)',
-              fontWeight: 300,
-            }}
+            className="flex items-center gap-4 mt-5"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.9, delay: 0.9 }}
           >
-            Now Presenting
-          </span>
-          <motion.div
-            className="h-px bg-avani-gold"
-            initial={{ width: 0 }}
-            animate={{ width: 40 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            style={{ opacity: 0.7 }}
-          />
+            <motion.div
+              className="h-px"
+              style={{ background: 'rgba(201,168,76,0.5)' }}
+              initial={{ width: 0 }}
+              animate={{ width: 36 }}
+              transition={{ duration: 0.7, delay: 1.1 }}
+            />
+            <span
+              style={{
+                fontFamily: 'var(--font-jost)',
+                fontSize: '8.5px',
+                letterSpacing: '0.48em',
+                textTransform: 'uppercase',
+                color: 'rgba(201,168,76,0.65)',
+                fontWeight: 300,
+              }}
+            >
+              Now Presenting
+            </span>
+            <motion.div
+              className="h-px"
+              style={{ background: 'rgba(201,168,76,0.5)' }}
+              initial={{ width: 0 }}
+              animate={{ width: 36 }}
+              transition={{ duration: 0.7, delay: 1.1 }}
+            />
+          </motion.div>
         </motion.div>
 
         {/* AVANI — line-by-line reveal */}
